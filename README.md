@@ -1,4 +1,4 @@
-LaGGY virtual assistant for Klipper.
+# LAGGY virtual assistant for Klipper.
 Python project to reuse the LCD-knob-screen of the Anycubic Kobra 2 neo and the Anycubic Kobra Go. Unlike the Klipper-Screen compatibility project below, it utilizes the knob of the screen giving it handy quick control features. 
 
 Able to pause prints using a double click, change print speed, show basic information and a bit more.
@@ -47,11 +47,14 @@ EndSection
 ```
 If not, change ```Driver          "fbdev"``` to ```Driver          "fbturbo"```, press CTRL+X, then Y, and reboot.
 
-Edit /etc/rc.local and add the python script under the main script (```sudo /path/to/Anycubic-Kobra-Go-Neo-LCD-Driver/build/fbcp-ili9341 &```). 
+To download the Python scripts and assets use:
+```git clone https://github.com/PowerCmptr/Laggy_Klipper```
+
+Edit /etc/rc.local with ```sudo nano /etc/rc.local``` and add the python script under the main script (```sudo /path/to/Anycubic-Kobra-Go-Neo-LCD-Driver/build/fbcp-ili9341 &```). 
 ```
-cd /path/to/repo/
+cd /path/to/Laggy_Klipper/
 python3 main.py &
 ```
-
+Now press CTRL+X. then Y and ENTER. Now reboot ```sudo reboot now``` and after a reboot LAGGY should appear on your screen and you're done!
 
 ![IMG_2512](https://github.com/user-attachments/assets/bfc56d29-5f18-4a56-b0da-eed078de4e18)
